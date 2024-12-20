@@ -7,7 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CoreModule, SharedModule, AllFeaturesModule, LayoutModule],
+  imports: [RouterOutlet, CoreModule, SharedModule, AllFeaturesModule,LayoutModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   standalone : true

@@ -1,2 +1,2 @@
-export * from './home/home.module';
-export * from './login/login.module'
+export * from './private/main/home.module';
+export * from './public/identity/login.module'

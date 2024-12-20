@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import * as component from './index'
+import { routes } from './layout-routing.module';
 
 
 
@@ -12,12 +14,10 @@ import * as component from './index'
     component.LayoutLoginComponent
   ],
   imports: [
-    CommonModule
-
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   exports:[
-    component.FooterComponent,
-    component.HeaderComponent,
     component.LayoutHomeComponent,
     component.LayoutLoginComponent
   ]

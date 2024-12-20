@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './login-routing.module';
-import * as layout from '../../layout/index';
+import * as layout from '../../../layout/index';
 
 
 
@@ -11,7 +11,7 @@ import * as layout from '../../layout/index';
   declarations: [LoginComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
+    RouterModule.forChild(routes),  
     layout.LayoutModule
   ]
 })

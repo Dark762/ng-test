@@ -1,0 +1,30 @@
+.header {
+    background-color: #003b80; /* Blue */
+    color: white;
+  }
+  .split-line {
+    display: flex;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+  }
+  .split-line .stripe {
+    flex: 1;
+  }
+  .stripe-green {
+    background-color: #008060; /* Green */
+  }
+  .stripe-teal {
+    background-color: #30d5c8; /* Teal */
+  }
+  .stripe-orange {
+    background-color: #ff8c00; /* Orange */
+  }
+  .stripe-yellow {
+    background-color: #ffd700; /* Yellow */
+  }
+  .user-info {
+    color: white;
+    float: right;
+    margin-right: 15px;
+  }
