@@ -11,7 +11,8 @@ import { routes } from './layout-routing.module';
     component.FooterComponent,
     component.HeaderComponent,
     component.LayoutHomeComponent,
-    component.LayoutLoginComponent
+    component.LayoutLoginComponent,
+    component.MenuComponent
   ],
   imports: [
     CommonModule,

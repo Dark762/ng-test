@@ -1,7 +1,26 @@
-<app-header></app-header>
+<div class="container-fluid">
 
+    <header class="bg-primary text-white text-center py-3">
+        <app-header></app-header>
+    </header>
 
-<p>layout-home works!</p>
-<router-outlet />
+    <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar py-4">
+            <app-menu></app-menu>
+        </nav>
+        
+        
 
-<app-footer></app-footer>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="pt-3 pb-2 mb-3">
+                <router-outlet />
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-dark text-white text-center py-3">
+        <app-footer></app-footer>
+        <p>&copy; 2024 My Website | All Rights Reserved</p>
+    </footer> -->
+</div>

@@ -1,0 +1,41 @@
+<button class="btn btn-secondary d-md-none mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    Toggle Menu
+</button>
+<div class="collapse d-md-block" id="sidebarMenu" style="height: 100%;">
+    <div class="position-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#aboutSubmenu" role="button" aria-expanded="false" aria-controls="aboutSubmenu">About</a>
+                <div class="collapse" id="aboutSubmenu">
+                    <ul class="list-unstyled ps-3">
+                        <li><a class="nav-link" href="#">Our Team</a></li>
+                        <li><a class="nav-link" href="#">Our Story</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#servicesSubmenu" role="button" aria-expanded="false" aria-controls="servicesSubmenu">Services</a>
+                <div class="collapse" id="servicesSubmenu">
+                    <ul class="list-unstyled ps-3">
+                        <li><a class="nav-link" href="#">Consulting</a></li>
+                        <li><a class="nav-link" href="#">Development</a></li>
+                        <li><a class="nav-link" data-bs-toggle="collapse" href="#subService" role="button" aria-expanded="false" aria-controls="subService">More Services</a>
+                            <div class="collapse" id="subService">
+                                <ul class="list-unstyled ps-3">
+                                    <li><a class="nav-link" href="#">Training</a></li>
+                                    <li><a class="nav-link" href="#">Support</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>

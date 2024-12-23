@@ -1,0 +1,12 @@
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+}
