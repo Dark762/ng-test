@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { routes } from './home-routing.module';
+import { routes } from './main-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 
@@ -18,4 +18,4 @@ import { AboutComponent } from './components/about/about.component';
     RouterModule.forChild(routes)
   ]
 })
-export class HomeModule { }
+export class MainModule { }

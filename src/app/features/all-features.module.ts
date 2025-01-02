@@ -9,8 +9,9 @@ import * as fromFeatures from './index';
   declarations: [],
   imports: [
     CommonModule,
-    fromFeatures.HomeModule,
-    fromFeatures.LoginModule
+    fromFeatures.MainModule,
+    fromFeatures.LoginModule,
+    fromFeatures.AdministrationModule
   ]
 })
 export class AllFeaturesModule { }

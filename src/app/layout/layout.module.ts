@@ -16,7 +16,8 @@ import { routes } from './layout-routing.module';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+
   ],
   exports:[
     component.LayoutHomeComponent,

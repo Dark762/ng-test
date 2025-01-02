@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { LayoutLoginComponent } from './components/layout-login/layout-login.component';
 import { LoginComponent } from '../features/public/identity/components/login/login.component';
 import { LayoutHomeComponent } from './components/layout-home/layout-home.component';
-import { HomeComponent } from '../features/private/main/components/home/home.component';
+
 
 export const routes: Routes = [
     {
@@ -19,9 +19,13 @@ export const routes: Routes = [
         component: LayoutHomeComponent,
         children:[
             {
-                path:"home",
-                component : HomeComponent
-            }
+                path:"main",
+                loadChildren: () => import('../features/private/main/main.module').then(m => m.MainModule)
+            },
+            {
+                path:"administration",
+                loadChildren: () => import('../features/private/administration/administration.module').then(m => m.AdministrationModule)
+            },
         ]
     }
 ];
