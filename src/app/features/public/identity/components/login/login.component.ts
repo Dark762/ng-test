@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../../../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -9,12 +11,11 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  constructor(private router: Router){
+  constructor(){
 
   }
 
-  fnRedirectHome(){
-    this.router.navigate(['/private/main/home']);
+  fnLogin(){
+      window.location.href = `${environment.apiUrl}/auth/login`;
   }
-
 }

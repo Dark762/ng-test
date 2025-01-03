@@ -3,4 +3,4 @@ export * from './private/main/main.module';
 export * from './private/administration/administration.module';
 
 /*PUBLIC MODULE */
-export * from './public/identity/login.module'
+export * from './public/identity/identity.module';

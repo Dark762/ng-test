@@ -10,7 +10,7 @@ import * as fromFeatures from './index';
   imports: [
     CommonModule,
     fromFeatures.MainModule,
-    fromFeatures.LoginModule,
+    fromFeatures.IdentityModule,
     fromFeatures.AdministrationModule
   ]
 })
