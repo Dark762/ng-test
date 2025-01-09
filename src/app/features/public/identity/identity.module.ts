@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './identity-routing.module';
-import * as layout from '../../../layout/index';
 import { CallBackComponent } from './components/call-back/call-back.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from '../../../core/services/auth-service/auth.service';
 
 
 
@@ -13,8 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [LoginComponent, CallBackComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
-    HttpClientModule  
-  ]
+    HttpClientModule,
+    RouterModule.forChild(routes)
+   
+  ],
+  providers: [AuthService]
 })
 export class IdentityModule { }

@@ -10,8 +10,10 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    { provide: ErrorHandler, useClass: GlobalErrorHandlerService },
+    //{ provide: ErrorHandler, useClass: GlobalErrorHandlerService },
+
     //{ provide: HTTP_INTERCEPTORS, useFactory: () => AuthInterceptor, multi: true },
     //{ provide: HTTP_INTERCEPTORS, useFactory: () => httpErrorInterceptor, multi: true }
-  ]
+  ],
+
 };

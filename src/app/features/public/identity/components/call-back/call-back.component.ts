@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../../../../../environments/environment';
 
 @Component({
@@ -11,22 +11,16 @@ import { environment } from '../../../../../../environments/environment';
 })
 export class CallBackComponent {
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const code = params['code'];
       if (code) {
-        this.handleCallback(code);
+        localStorage.setItem('access_token', code);
+        this.router.navigate(['/private/main/home']);
       }
     });
   }
 
-  handleCallback(code: string) {
-    this.http.post(environment.apiUrl + '/auth/callback', { code })
-      .subscribe(token => {
-        console.log('Token received:', token);
-        localStorage.setItem('access_token', token.toString());
-      });
-  }
 }

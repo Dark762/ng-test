@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import * as component from './index'
 import { routes } from './layout-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,6 +18,7 @@ import { routes } from './layout-routing.module';
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    HttpClientModule  
 
   ],
   exports:[

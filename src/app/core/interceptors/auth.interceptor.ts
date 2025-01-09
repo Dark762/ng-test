@@ -1,15 +1,20 @@
 import { HttpInterceptorFn } from '@angular/common/http';
-import { HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpEvent } from '@angular/common/http';
+import { tap } from 'rxjs';
 
 export const AuthInterceptor: HttpInterceptorFn = (req, next) => {
-  
-  const clonedRequest = req.clone({
-    setHeaders: {
-      Authorization: 'Bearer my-auth-token' 
-    }
-  });
 
-  
-  return next(req);
+  return next(req).pipe(
+    tap((event: HttpEvent<any>) => {
+
+      if (event.type === 4 && event.headers?.has('Authorization')) {
+        const authHeader = event.headers.get('Authorization');
+        if (authHeader) {
+
+          localStorage.setItem('authToken', authHeader);
+          console.log('Authorization token saved:', authHeader);
+        }
+      }
+    })
+  );
 };

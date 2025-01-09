@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './main-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,7 +16,8 @@ import { AboutComponent } from './components/about/about.component';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule  
   ]
 })
 export class MainModule { }
